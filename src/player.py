@@ -7,6 +7,7 @@ ip = "127.0.0.1"
 port = 9002
 initOSCClient(ip, port)
 chord_octave = 5
+BPM = 100
 
 def play_chord(chord):
 	sendOSCMsg("/note", [1, note_to_midi(chord[0])])
@@ -26,4 +27,4 @@ if __name__ == "__main__":
 	p = progressions.to_chords(g, "C")
 	for c in p:
 		play_chord(c)
-		sleep(1)
+		sleep(60.0/BPM)
