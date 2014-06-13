@@ -15,10 +15,8 @@ transition_probabilities = np.array(
 
 major_chords = ["I", "IIm", "IIIm", "IV", "V", "VIm", "VIIdim"]
 
-def generate(length=8, start_chord=None, resolve=True):
+def generate(length=8, start_chord=1, resolve=True):
 	progression = np.empty(length, object)
-	if start_chord is None:
-		start_chord = 1
 	progression[0] = start_chord
 	
 	for i in range(1, length):

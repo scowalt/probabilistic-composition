@@ -24,7 +24,7 @@ if __name__ == "__main__":
 	# sendOSCMsg("/note", [4, 78])
 	g = gen.generate()
 	print g
-	p = progressions.to_chords(g, "C")
+	p = progressions.to_chords(g, "D")
 	for c in p:
 		play_chord(c)
 		sleep(60.0/BPM)
